@@ -1,4 +1,4 @@
-import greetings from "../src/cli.js";
+import greetings from "./cli.js";
 
 const startGame = () => {
   console.log("Welcome to the Brain Games!");

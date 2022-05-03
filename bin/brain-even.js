@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from "readline-sync";
-import startGame from "./start-game.js";
+import startGame from "../src/start-game.js";
 
 const name = startGame();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
