@@ -1,45 +1,40 @@
 #!/usr/bin/env node
 
 import { cons, car, cdr } from "@hexlet/pairs";
-import readlineSync from "readline-sync";
 import startGame from "../src/start-game.js";
+import { wrongAnswer, congratsWinner, userAnswer } from "../src/index.js";
 
 const name = startGame();
 console.log("What is the result of the expression?");
 
-let correctAnswers = 0;
+let correctAnswersCount = 0;
 const mathOperations = ["+", "-", "*"];
 
-while (correctAnswers < 3) {
+while (correctAnswersCount < 3) {
   const pair = cons(
     Math.floor(Math.random() * 100) + 1,
     Math.floor(Math.random() * 100) + 1
   );
   const operation = mathOperations[Math.floor(Math.random() * 3)];
-  let resoult;
+  let correctAnswer;
   if (operation === "+") {
-    resoult = car(pair) + cdr(pair);
+    correctAnswer = car(pair) + cdr(pair);
   } else if (operation === "-") {
-    resoult = car(pair) - cdr(pair);
+    correctAnswer = car(pair) - cdr(pair);
   } else if (operation === "*") {
-    resoult = car(pair) * cdr(pair);
+    correctAnswer = car(pair) * cdr(pair);
   }
 
   const question = `${String(car(pair))} ${operation} ${String(cdr(pair))}`;
-  const answer = readlineSync.question(`Question: ${question}\nYour answer:`);
+  const answer = userAnswer(question);
 
-  if (Number(answer) === resoult) {
+  if (Number(answer) === correctAnswer) {
     console.log("Correct!");
-    correctAnswers += 1;
+    correctAnswersCount += 1;
   } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${resoult}'.`
-    );
-    console.log(`Let's try again, ${name}!`);
+    wrongAnswer(answer, correctAnswer, name);
     break;
   }
 
-  if (correctAnswers === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  congratsWinner(correctAnswersCount, name);
 }
