@@ -8,3 +8,6 @@
 
 <h2>brain-even:</h1>
 <a href="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU" target="_blank"><img src="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU.svg" /></a>
+
+<h2>brain-calc:</h2>
+<a href="https://asciinema.org/a/KFvg0IjLISN0RUgJGrQcsaQ7x" target="_blank"><img src="https://asciinema.org/a/KFvg0IjLISN0RUgJGrQcsaQ7x.svg" /></a>
