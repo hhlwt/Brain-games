@@ -1,4 +1,5 @@
 import readlineSync from "readline-sync";
+import { cons } from "@hexlet/pairs";
 
 export const wrongAnswer = (answer, correctAnswer, name) => {
   console.log(
@@ -15,3 +16,26 @@ export const congratsWinner = (correctAnswersCount, name) => {
 
 export const userAnswer = (question) =>
   readlineSync.question(`Question: ${question}\nYour answer: `);
+
+export const generatePair = () => {
+  const pair = cons(
+    Math.floor(Math.random() * 100) + 1,
+    Math.floor(Math.random() * 100) + 1
+  );
+  return pair;
+};
+
+export const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
+  if (secondNumber === 0) {
+    return fisrstNumber;
+  }
+  if (secondNumber === fisrstNumber) {
+    return fisrstNumber;
+  }
+  if (fisrstNumber > secondNumber) {
+    const remainder = fisrstNumber % secondNumber;
+    return theEuclideanAlgorithm(secondNumber, remainder);
+  }
+  const remainder = secondNumber % fisrstNumber;
+  return theEuclideanAlgorithm(fisrstNumber, remainder);
+};
