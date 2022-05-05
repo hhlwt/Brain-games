@@ -6,10 +6,10 @@ import {
   userAnswer,
   theEuclideanAlgorithm,
 } from "../index.js";
-import startGame from "../start-game.js";
+import greetings from "../cli.js";
 
 const braingcd = () => {
-  const name = startGame();
+  const name = greetings();
   console.log("Find the greatest common divisor of given numbers.");
 
   let correctAnswersCount = 0;

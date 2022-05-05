@@ -1,7 +1,7 @@
-import startGame from "../start-game.js";
+import greetings from "../cli.js";
 import { wrongAnswer, congratsWinner, userAnswer } from "../index.js";
 
-const name = startGame();
+const name = greetings();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const braineven = () => {

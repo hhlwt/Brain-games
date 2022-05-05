@@ -5,10 +5,10 @@ import {
   congratsWinner,
   userAnswer,
 } from "../index.js";
-import startGame from "../start-game.js";
+import greetings from "../cli.js";
 
 const braincalc = () => {
-  const name = startGame();
+  const name = greetings();
   console.log("What is the result of the expression?");
 
   let correctAnswersCount = 0;
