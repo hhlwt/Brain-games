@@ -21,10 +21,7 @@ export const random = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
 
 export const generatePair = () => {
-  const pair = cons(
-    Math.floor(Math.random() * 100) + 1,
-    Math.floor(Math.random() * 100) + 1
-  );
+  const pair = cons(random(1, 101), random(1, 101));
   return pair;
 };
 
