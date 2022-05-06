@@ -9,6 +9,7 @@ import {
 import greetings from "../cli.js";
 
 const braincalc = () => {
+  console.log("Welcome to the Brain Games!");
   const name = greetings();
   console.log("What is the result of the expression?");
 

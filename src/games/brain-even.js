@@ -1,10 +1,11 @@
 import greetings from "../cli.js";
 import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
 
-const name = greetings();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
 const braineven = () => {
+  console.log("Welcome to the Brain Games!");
+  const name = greetings();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {

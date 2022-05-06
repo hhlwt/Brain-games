@@ -1,10 +1,11 @@
 import greetings from "../cli.js";
 import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
 
-const name = greetings();
-console.log("What number is missing in the progression?");
-
 const brainprogression = () => {
+  console.log("Welcome to the Brain Games!");
+  const name = greetings();
+  console.log("What number is missing in the progression?");
+
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {

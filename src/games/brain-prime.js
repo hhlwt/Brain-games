@@ -7,10 +7,11 @@ import {
   random,
 } from "../index.js";
 
-const name = greetings();
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
 const brainprime = () => {
+  console.log("Welcome to the Brain Games!");
+  const name = greetings();
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {
