@@ -5,6 +5,11 @@
 ![Hexlet-lint](https://github.com/hhlwt/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
 
 <h1>How it works?</h1>
+<ol>You should make the following steps to try it yourself:
+  <li>git clone git@github.com:hhlwt/frontend-project-lvl1.git</li>
+  <li>make install</li>
+  <li>npm link</li>
+</ol>
 
 <h2>brain-even:</h1>
 <a href="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU" target="_blank"><img src="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU.svg" /></a>
