@@ -7,9 +7,10 @@ import {
   random,
 } from "../index.js";
 import greetings from "../cli.js";
+import startGame from "../start-game.js";
 
 const braincalc = () => {
-  console.log("Welcome to the Brain Games!");
+  startGame();
   const name = greetings();
   console.log("What is the result of the expression?");
 

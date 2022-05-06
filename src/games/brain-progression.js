@@ -1,8 +1,9 @@
 import greetings from "../cli.js";
+import startGame from "../start-game.js";
 import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
 
 const brainprogression = () => {
-  console.log("Welcome to the Brain Games!");
+  startGame();
   const name = greetings();
   console.log("What number is missing in the progression?");
 

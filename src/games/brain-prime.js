@@ -1,4 +1,5 @@
 import greetings from "../cli.js";
+import startGame from "../start-game.js";
 import {
   wrongAnswer,
   congratsWinner,
@@ -8,7 +9,7 @@ import {
 } from "../index.js";
 
 const brainprime = () => {
-  console.log("Welcome to the Brain Games!");
+  startGame();
   const name = greetings();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
