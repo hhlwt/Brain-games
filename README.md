@@ -5,20 +5,21 @@
 ![Hexlet-lint](https://github.com/hhlwt/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
 
 <h1>How it works?</h1>
-<ol>You should make the following steps to try it yourself:
+<h2>You should make the following steps to try it yourself:</h2>
+<ol>
   <li>git clone git@github.com:hhlwt/frontend-project-lvl1.git</li>
   <li>make install</li>
   <li>npm link</li>
 </ol>
 
-<h2>brain-even:</h1>
+<h3>brain-even:</h3>
 <a href="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU" target="_blank"><img src="https://asciinema.org/a/lGlSoiPABViFIAr6w6p2U0HcU.svg" /></a>
 
-<h2>brain-calc:</h2>
+<h3>brain-calc:</h3>
 <a href="https://asciinema.org/a/KFvg0IjLISN0RUgJGrQcsaQ7x" target="_blank"><img src="https://asciinema.org/a/KFvg0IjLISN0RUgJGrQcsaQ7x.svg" /></a>
 
-<h2>brain-gcd:</h2>
+<h3>brain-gcd:</h3>
 <a href="https://asciinema.org/a/H2BlttvDvCC5tm6P99UY5UfzN" target="_blank"><img src="https://asciinema.org/a/H2BlttvDvCC5tm6P99UY5UfzN.svg" /></a>
 
-<h2>brain-progression:</h2>
+<h3>brain-progression:</h3>
 <a href="https://asciinema.org/a/QU0rYPuZATx8YpAkmSmol8IRE" target="_blank"><img src="https://asciinema.org/a/QU0rYPuZATx8YpAkmSmol8IRE.svg" /></a>
