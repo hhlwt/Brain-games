@@ -1,6 +1,8 @@
-import greetings from "../cli.js";
-import startGame from "../start-game.js";
-import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
+import greetings from '../cli.js';
+import startGame from '../start-game.js';
+import {
+  wrongAnswer, congratsWinner, userAnswer, random,
+} from '../index.js';
 
 const braineven = () => {
   startGame();
@@ -11,14 +13,14 @@ const braineven = () => {
 
   while (correctAnswersCount < 3) {
     const randomNumber = random(1, 101);
-    let correctAnswer = "no";
+    let correctAnswer = 'no';
     if (randomNumber % 2 === 0) {
-      correctAnswer = "yes";
+      correctAnswer = 'yes';
     }
     const answer = userAnswer(randomNumber);
 
     if (answer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       wrongAnswer(answer, correctAnswer, name);

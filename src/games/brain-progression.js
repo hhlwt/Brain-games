@@ -1,11 +1,13 @@
-import greetings from "../cli.js";
-import startGame from "../start-game.js";
-import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
+import greetings from '../cli.js';
+import startGame from '../start-game.js';
+import {
+  wrongAnswer, congratsWinner, userAnswer, random,
+} from '../index.js';
 
 const brainprogression = () => {
   startGame();
   const name = greetings();
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
 
   let correctAnswersCount = 0;
 
@@ -20,13 +22,13 @@ const brainprogression = () => {
 
     const unknownElement = random(1, arrayLength - 1);
     const correctAnswer = progressionArray[unknownElement];
-    progressionArray[unknownElement] = "..";
+    progressionArray[unknownElement] = '..';
 
-    const question = progressionArray.join(" ");
+    const question = progressionArray.join(' ');
     const answer = userAnswer(question);
 
     if (Number(answer) === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       wrongAnswer(answer, correctAnswer, name);

@@ -1,31 +1,31 @@
-import { car, cdr } from "@hexlet/pairs";
+import { car, cdr } from '@hexlet/pairs';
 import {
   generatePair,
   wrongAnswer,
   congratsWinner,
   userAnswer,
   random,
-} from "../index.js";
-import greetings from "../cli.js";
-import startGame from "../start-game.js";
+} from '../index.js';
+import greetings from '../cli.js';
+import startGame from '../start-game.js';
 
 const braincalc = () => {
   startGame();
   const name = greetings();
-  console.log("What is the result of the expression?");
+  console.log('What is the result of the expression?');
 
   let correctAnswersCount = 0;
-  const mathOperations = ["+", "-", "*"];
+  const mathOperations = ['+', '-', '*'];
 
   while (correctAnswersCount < 3) {
     const pair = generatePair();
     const operation = mathOperations[random(0, 3)];
     let correctAnswer;
-    if (operation === "+") {
+    if (operation === '+') {
       correctAnswer = car(pair) + cdr(pair);
-    } else if (operation === "-") {
+    } else if (operation === '-') {
       correctAnswer = car(pair) - cdr(pair);
-    } else if (operation === "*") {
+    } else if (operation === '*') {
       correctAnswer = car(pair) * cdr(pair);
     }
 
@@ -33,7 +33,7 @@ const braincalc = () => {
     const answer = userAnswer(question);
 
     if (Number(answer) === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       wrongAnswer(answer, correctAnswer, name);

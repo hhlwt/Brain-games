@@ -1,18 +1,18 @@
-import { car, cdr } from "@hexlet/pairs";
+import { car, cdr } from '@hexlet/pairs';
 import {
   generatePair,
   wrongAnswer,
   congratsWinner,
   userAnswer,
   theEuclideanAlgorithm,
-} from "../index.js";
-import greetings from "../cli.js";
-import startGame from "../start-game.js";
+} from '../index.js';
+import greetings from '../cli.js';
+import startGame from '../start-game.js';
 
 const braingcd = () => {
   startGame();
   const name = greetings();
-  console.log("Find the greatest common divisor of given numbers.");
+  console.log('Find the greatest common divisor of given numbers.');
 
   let correctAnswersCount = 0;
 
@@ -24,7 +24,7 @@ const braingcd = () => {
     const answer = userAnswer(question);
 
     if (Number(answer) === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       wrongAnswer(answer, correctAnswer, name);

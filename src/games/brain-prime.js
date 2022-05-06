@@ -1,12 +1,12 @@
-import greetings from "../cli.js";
-import startGame from "../start-game.js";
+import greetings from '../cli.js';
+import startGame from '../start-game.js';
 import {
   wrongAnswer,
   congratsWinner,
   userAnswer,
   isPrime,
   random,
-} from "../index.js";
+} from '../index.js';
 
 const brainprime = () => {
   startGame();
@@ -23,7 +23,7 @@ const brainprime = () => {
     const answer = userAnswer(question);
 
     if (answer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       wrongAnswer(answer, correctAnswer, name);
