@@ -4,7 +4,7 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![Hexlet-lint](https://github.com/hhlwt/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
 
-<h1>Brain-games is a simple collection of console games.</h1>
+<h1>This is a collection of simple console games.</h1>
 
 <h1>How it works?</h1>
 <h2>You should make the following steps to try it yourself:</h2>
