@@ -1,5 +1,5 @@
 import greetings from "../cli.js";
-import { wrongAnswer, congratsWinner, userAnswer } from "../index.js";
+import { wrongAnswer, congratsWinner, userAnswer, random } from "../index.js";
 
 const name = greetings();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -8,7 +8,7 @@ const braineven = () => {
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const randomNumber = random(1, 101);
     let correctAnswer = "no";
     if (randomNumber % 2 === 0) {
       correctAnswer = "yes";

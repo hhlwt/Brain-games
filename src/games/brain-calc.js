@@ -4,6 +4,7 @@ import {
   wrongAnswer,
   congratsWinner,
   userAnswer,
+  random,
 } from "../index.js";
 import greetings from "../cli.js";
 
@@ -16,7 +17,7 @@ const braincalc = () => {
 
   while (correctAnswersCount < 3) {
     const pair = generatePair();
-    const operation = mathOperations[Math.floor(Math.random() * 3)];
+    const operation = mathOperations[random(0, 3)];
     let correctAnswer;
     if (operation === "+") {
       correctAnswer = car(pair) + cdr(pair);
