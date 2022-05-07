@@ -1,5 +1,5 @@
-# Ignore node_modules
-node_modules
-
 # Ignore hexlet-code-1.0.0.tgz
 hexlet-code-1.0.0.tgz
+
+# Ignore node_modules
+node_modules
