@@ -14,7 +14,7 @@ export const congratsWinner = (correctAnswersCount, name) => {
   }
 };
 
-export const userAnswer = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
+export const askUser = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
 
 export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 

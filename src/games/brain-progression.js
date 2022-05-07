@@ -1,6 +1,6 @@
 import greetings from '../cli.js';
 import {
-  wrongAnswer, congratsWinner, userAnswer, random,
+  wrongAnswer, congratsWinner, askUser, random,
 } from '../index.js';
 
 const brainprogression = () => {
@@ -23,7 +23,7 @@ const brainprogression = () => {
     progressionArray[unknownElement] = '..';
 
     const question = progressionArray.join(' ');
-    const answer = userAnswer(question);
+    const answer = askUser(question);
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');

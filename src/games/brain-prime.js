@@ -2,7 +2,7 @@ import greetings from '../cli.js';
 import {
   wrongAnswer,
   congratsWinner,
-  userAnswer,
+  askUser,
   isPrime,
   random,
 } from '../index.js';
@@ -18,7 +18,7 @@ const brainprime = () => {
     const correctAnswer = isPrime(number);
 
     const question = `${number}`;
-    const answer = userAnswer(question);
+    const answer = askUser(question);
 
     if (answer === correctAnswer) {
       console.log('Correct!');

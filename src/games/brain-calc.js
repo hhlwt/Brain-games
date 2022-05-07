@@ -3,7 +3,7 @@ import {
   generatePair,
   wrongAnswer,
   congratsWinner,
-  userAnswer,
+  askUser,
   random,
 } from '../index.js';
 import greetings from '../cli.js';
@@ -28,7 +28,7 @@ const braincalc = () => {
     }
 
     const question = `${String(car(pair))} ${operation} ${String(cdr(pair))}`;
-    const answer = userAnswer(question);
+    const answer = askUser(question);
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');

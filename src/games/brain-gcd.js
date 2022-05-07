@@ -3,7 +3,7 @@ import {
   generatePair,
   wrongAnswer,
   congratsWinner,
-  userAnswer,
+  askUser,
   theEuclideanAlgorithm,
 } from '../index.js';
 import greetings from '../cli.js';
@@ -19,7 +19,7 @@ const braingcd = () => {
     const correctAnswer = theEuclideanAlgorithm(car(pair), cdr(pair));
 
     const question = `${String(car(pair))} ${String(cdr(pair))}`;
-    const answer = userAnswer(question);
+    const answer = askUser(question);
 
     if (Number(answer) === correctAnswer) {
       console.log('Correct!');

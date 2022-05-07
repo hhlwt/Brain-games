@@ -1,6 +1,6 @@
 import greetings from '../cli.js';
 import {
-  wrongAnswer, congratsWinner, userAnswer, random,
+  wrongAnswer, congratsWinner, askUser, random,
 } from '../index.js';
 
 const braineven = () => {
@@ -15,7 +15,7 @@ const braineven = () => {
     if (randomNumber % 2 === 0) {
       correctAnswer = 'yes';
     }
-    const answer = userAnswer(randomNumber);
+    const answer = askUser(randomNumber);
 
     if (answer === correctAnswer) {
       console.log('Correct!');
