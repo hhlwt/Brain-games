@@ -1,6 +1,6 @@
 import { random, engine } from '../index.js';
 
-const generateMission = () => {
+const runGame = () => {
   const arrayLength = random(5, 11);
   const theCommonDifference = random(1, 6);
   const progressionArray = [random(1, 101)];
@@ -18,8 +18,8 @@ const generateMission = () => {
 };
 
 const brainProgression = () => {
-  const toDo = 'What number is missing in the progression?';
-  engine(toDo, generateMission);
+  const mission = 'What number is missing in the progression?';
+  engine(mission, runGame);
 };
 
 export default brainProgression;

@@ -1,6 +1,6 @@
 import { random, engine } from '../index.js';
 
-const generateMission = () => {
+const runGame = () => {
   const randomNumber = random(1, 101);
   let correctAnswer = 'no';
   if (randomNumber % 2 === 0) {
@@ -11,8 +11,8 @@ const generateMission = () => {
 };
 
 const brainEven = () => {
-  const toDo = 'Answer "yes" if the number is even, otherwise answer "no".';
-  engine(toDo, generateMission);
+  const mission = 'Answer "yes" if the number is even, otherwise answer "no".';
+  engine(mission, runGame);
 };
 
 export default brainEven;

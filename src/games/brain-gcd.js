@@ -20,7 +20,7 @@ export const generatePair = () => {
   return pair;
 };
 
-const generateMission = () => {
+const runGame = () => {
   const pair = generatePair();
   const correctAnswer = theEuclideanAlgorithm(pair[0], pair[1]);
   const question = `${String(pair[0])} ${String(pair[1])}`;
@@ -29,8 +29,8 @@ const generateMission = () => {
 };
 
 const brainGCD = () => {
-  const toDo = 'Find the greatest common divisor of given numbers.';
-  engine(toDo, generateMission);
+  const mission = 'Find the greatest common divisor of given numbers.';
+  engine(mission, runGame);
 };
 
 export default brainGCD;

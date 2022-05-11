@@ -24,7 +24,7 @@ export const congratsWinner = (correctAnswersCount, name) => {
 
 export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-export const engine = (toDo, generateMission) => {
+export const engine = (toDo, runGame) => {
   const name = greetUser();
   console.log(toDo);
 
@@ -32,13 +32,13 @@ export const engine = (toDo, generateMission) => {
   const correctAnswersToWin = 3;
 
   while (correctAnswersCount < correctAnswersToWin) {
-    const [question, correctAnswer] = generateMission();
-    const answer = askUser(question);
-    if (answer === String(correctAnswer)) {
+    const [question, correctAnswer] = runGame();
+    const userAnswer = askUser(question);
+    if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      wrongAnswer(answer, correctAnswer, name);
+      wrongAnswer(userAnswer, correctAnswer, name);
       break;
     }
   }

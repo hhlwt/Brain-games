@@ -5,7 +5,7 @@ export const generatePair = () => {
   return pair;
 };
 
-const generateMission = () => {
+const runGame = () => {
   const operands = generatePair();
   const mathOperations = ['+', '-', '*'];
   const operation = mathOperations[random(0, 3)];
@@ -25,8 +25,8 @@ const generateMission = () => {
 };
 
 const brainCalc = () => {
-  const toDo = 'What is the result of the expression?';
-  engine(toDo, generateMission);
+  const mission = 'What is the result of the expression?';
+  engine(mission, runGame);
 };
 
 export default brainCalc;

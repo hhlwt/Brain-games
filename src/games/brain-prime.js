@@ -8,7 +8,7 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const generateMission = () => {
+const runGame = () => {
   const number = random(1, 101);
   const correctAnswer = isPrime(number);
   const question = `${number}`;
@@ -17,8 +17,8 @@ const generateMission = () => {
 };
 
 const brainPrime = () => {
-  const toDo = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  engine(toDo, generateMission);
+  const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  engine(mission, runGame);
 };
 
 export default brainPrime;
