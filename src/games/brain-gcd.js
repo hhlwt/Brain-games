@@ -1,4 +1,3 @@
-import { car, cdr } from '@hexlet/pairs';
 import {
   generatePair,
   wrongAnswer,
@@ -16,9 +15,9 @@ const brainGCD = () => {
 
   while (correctAnswersCount < 3) {
     const pair = generatePair();
-    const correctAnswer = theEuclideanAlgorithm(car(pair), cdr(pair));
+    const correctAnswer = theEuclideanAlgorithm(pair[0], pair[1]);
 
-    const question = `${String(car(pair))} ${String(cdr(pair))}`;
+    const question = `${String(pair[0])} ${String(pair[1])}`;
     const answer = askUser(question);
 
     if (Number(answer) === correctAnswer) {

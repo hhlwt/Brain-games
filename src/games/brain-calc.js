@@ -1,4 +1,3 @@
-import { car, cdr } from '@hexlet/pairs';
 import {
   generatePair,
   wrongAnswer,
@@ -16,18 +15,18 @@ const brainCalc = () => {
   const mathOperations = ['+', '-', '*'];
 
   while (correctAnswersCount < 3) {
-    const pair = generatePair();
+    const operands = generatePair();
     const operation = mathOperations[random(0, 3)];
     let correctAnswer;
     if (operation === '+') {
-      correctAnswer = car(pair) + cdr(pair);
+      correctAnswer = operands[0] + operands[1];
     } else if (operation === '-') {
-      correctAnswer = car(pair) - cdr(pair);
+      correctAnswer = operands[0] - operands[1];
     } else if (operation === '*') {
-      correctAnswer = car(pair) * cdr(pair);
+      correctAnswer = operands[0] * operands[1];
     }
 
-    const question = `${String(car(pair))} ${operation} ${String(cdr(pair))}`;
+    const question = `${String(operands[0])} ${operation} ${String(operands[1])}`;
     const answer = askUser(question);
 
     if (Number(answer) === correctAnswer) {

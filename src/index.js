@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { cons } from '@hexlet/pairs';
 
 export const wrongAnswer = (answer, correctAnswer, name) => {
   console.log(
@@ -19,7 +18,7 @@ export const askUser = (question) => readlineSync.question(`Question: ${question
 export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const generatePair = () => {
-  const pair = cons(random(1, 101), random(1, 101));
+  const pair = [random(1, 101), random(1, 101)];
   return pair;
 };
 
