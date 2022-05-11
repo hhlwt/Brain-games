@@ -1,5 +1,14 @@
 import readlineSync from 'readline-sync';
 
+export const greetUser = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
+};
+
+export const askUser = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
+
 export const wrongAnswer = (answer, correctAnswer, name) => {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
@@ -13,41 +22,25 @@ export const congratsWinner = (correctAnswersCount, name) => {
   }
 };
 
-export const askUser = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
-
 export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-export const generatePair = () => {
-  const pair = [random(1, 101), random(1, 101)];
-  return pair;
-};
+export const engine = (toDo, generateMission) => {
+  const name = greetUser();
+  console.log(toDo);
 
-export const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
-  if (secondNumber === 0) {
-    return fisrstNumber;
-  }
-  if (secondNumber === fisrstNumber) {
-    return fisrstNumber;
-  }
-  if (fisrstNumber > secondNumber) {
-    const remainder = fisrstNumber % secondNumber;
-    return theEuclideanAlgorithm(secondNumber, remainder);
-  }
-  const remainder = secondNumber % fisrstNumber;
-  return theEuclideanAlgorithm(fisrstNumber, remainder);
-};
+  let correctAnswersCount = 0;
+  const correctAnswersToWin = 3;
 
-export const isPrime = (num) => {
-  if (num === 1) {
-    return 'no';
+  while (correctAnswersCount < correctAnswersToWin) {
+    const [question, correctAnswer] = generateMission();
+    const answer = askUser(question);
+    if (answer === String(correctAnswer)) {
+      console.log('Correct!');
+      correctAnswersCount += 1;
+    } else {
+      wrongAnswer(answer, correctAnswer, name);
+      break;
+    }
   }
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) if (num % i === 0) return 'no';
-  return 'yes';
-};
-
-export const greetUser = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
+  congratsWinner(correctAnswersCount, name);
 };
