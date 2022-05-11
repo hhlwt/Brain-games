@@ -5,11 +5,11 @@ import {
   congratsWinner,
   askUser,
   theEuclideanAlgorithm,
+  greetUser,
 } from '../index.js';
-import greetings from '../cli.js';
 
 const brainGCD = () => {
-  const name = greetings();
+  const name = greetUser();
   console.log('Find the greatest common divisor of given numbers.');
 
   let correctAnswersCount = 0;

@@ -1,10 +1,9 @@
-import greetings from '../cli.js';
 import {
-  wrongAnswer, congratsWinner, askUser, random,
+  wrongAnswer, congratsWinner, askUser, random, greetUser,
 } from '../index.js';
 
 const brainEven = () => {
-  const name = greetings();
+  const name = greetUser();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   let correctAnswersCount = 0;

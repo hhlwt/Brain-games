@@ -5,11 +5,11 @@ import {
   congratsWinner,
   askUser,
   random,
+  greetUser,
 } from '../index.js';
-import greetings from '../cli.js';
 
 const brainCalc = () => {
-  const name = greetings();
+  const name = greetUser();
   console.log('What is the result of the expression?');
 
   let correctAnswersCount = 0;

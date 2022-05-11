@@ -1,10 +1,9 @@
-import greetings from '../cli.js';
 import {
-  wrongAnswer, congratsWinner, askUser, random,
+  wrongAnswer, congratsWinner, askUser, random, greetUser,
 } from '../index.js';
 
 const brainProgression = () => {
-  const name = greetings();
+  const name = greetUser();
   console.log('What number is missing in the progression?');
 
   let correctAnswersCount = 0;
