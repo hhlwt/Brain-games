@@ -1,30 +1,28 @@
 import readlineSync from 'readline-sync';
 
-export const greetUser = () => {
+const greetUser = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
-export const askUser = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
+const askUser = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
 
-export const wrongAnswer = (answer, correctAnswer, name) => {
+const wrongAnswer = (answer, correctAnswer, name) => {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
   );
   console.log(`Let's try again, ${name}!`);
 };
 
-export const congratsWinner = (correctAnswersCount, name) => {
+const congratsWinner = (correctAnswersCount, name) => {
   if (correctAnswersCount === 3) {
     console.log(`Congratulations, ${name}!`);
   }
 };
 
-export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-export const engine = (toDo, runGame) => {
+const engine = (toDo, runGame) => {
   const name = greetUser();
   console.log(toDo);
 
@@ -44,3 +42,5 @@ export const engine = (toDo, runGame) => {
   }
   congratsWinner(correctAnswersCount, name);
 };
+
+export default engine;

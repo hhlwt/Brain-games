@@ -1,4 +1,6 @@
-import { random, engine } from '../index.js';
+import engine from '../index.js';
+
+const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const runGame = () => {
   const randomNumber = random(1, 101);

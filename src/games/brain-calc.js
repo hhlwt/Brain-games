@@ -1,6 +1,8 @@
-import { random, engine } from '../index.js';
+import engine from '../index.js';
 
-export const generatePair = () => {
+const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+const generatePair = () => {
   const pair = [random(1, 101), random(1, 101)];
   return pair;
 };

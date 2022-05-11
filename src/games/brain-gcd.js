@@ -1,4 +1,6 @@
-import { engine, random } from '../index.js';
+import engine from '../index.js';
+
+const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
   if (secondNumber === 0) {
@@ -15,7 +17,7 @@ const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
   return theEuclideanAlgorithm(fisrstNumber, remainder);
 };
 
-export const generatePair = () => {
+const generatePair = () => {
   const pair = [random(1, 101), random(1, 101)];
   return pair;
 };
