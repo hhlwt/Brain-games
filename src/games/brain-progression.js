@@ -3,7 +3,7 @@ import {
   wrongAnswer, congratsWinner, askUser, random,
 } from '../index.js';
 
-const brainprogression = () => {
+const brainProgression = () => {
   const name = greetings();
   console.log('What number is missing in the progression?');
 
@@ -36,4 +36,4 @@ const brainprogression = () => {
   congratsWinner(correctAnswersCount, name);
 };
 
-export default brainprogression;
+export default brainProgression;

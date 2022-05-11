@@ -3,7 +3,7 @@ import {
   wrongAnswer, congratsWinner, askUser, random,
 } from '../index.js';
 
-const braineven = () => {
+const brainEven = () => {
   const name = greetings();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -29,4 +29,4 @@ const braineven = () => {
   }
 };
 
-export default braineven;
+export default brainEven;

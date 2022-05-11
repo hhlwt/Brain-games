@@ -7,7 +7,7 @@ import {
   random,
 } from '../index.js';
 
-const brainprime = () => {
+const brainPrime = () => {
   const name = greetings();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -31,4 +31,4 @@ const brainprime = () => {
   congratsWinner(correctAnswersCount, name);
 };
 
-export default brainprime;
+export default brainPrime;

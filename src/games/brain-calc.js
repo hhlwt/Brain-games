@@ -8,7 +8,7 @@ import {
 } from '../index.js';
 import greetings from '../cli.js';
 
-const braincalc = () => {
+const brainCalc = () => {
   const name = greetings();
   console.log('What is the result of the expression?');
 
@@ -42,4 +42,4 @@ const braincalc = () => {
   }
 };
 
-export default braincalc;
+export default brainCalc;
