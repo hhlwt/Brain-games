@@ -1,16 +1,16 @@
-import engine from '../index.js';
+import runEngine from '../index.js';
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const generatePair = () => {
-  const pair = [random(1, 101), random(1, 101)];
+  const pair = [generateRandomNumber(1, 101), generateRandomNumber(1, 101)];
   return pair;
 };
 
-const runGame = () => {
+const generateRound = () => {
   const operands = generatePair();
   const mathOperations = ['+', '-', '*'];
-  const operation = mathOperations[random(0, 3)];
+  const operation = mathOperations[generateRandomNumber(0, 3)];
   let correctAnswer;
 
   if (operation === '+') {
@@ -23,12 +23,12 @@ const runGame = () => {
 
   const question = `${String(operands[0])} ${operation} ${String(operands[1])}`;
 
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
-const brainCalc = () => {
+const startGame = () => {
   const mission = 'What is the result of the expression?';
-  engine(mission, runGame);
+  runEngine(mission, generateRound);
 };
 
-export default brainCalc;
+export default startGame;

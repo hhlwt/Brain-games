@@ -1,27 +1,27 @@
-import engine from '../index.js';
+import runEngine from '../index.js';
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const runGame = () => {
-  const arrayLength = random(5, 11);
-  const theCommonDifference = random(1, 6);
-  const progressionArray = [random(1, 101)];
+const generateRound = () => {
+  const arrayLength = generateRandomNumber(5, 11);
+  const theCommonDifference = generateRandomNumber(1, 6);
+  const progressionArray = [generateRandomNumber(1, 101)];
 
   for (let i = 1; i < arrayLength; i += 1) {
     progressionArray[i] = progressionArray[i - 1] + theCommonDifference;
   }
 
-  const unknownElement = random(1, arrayLength - 1);
+  const unknownElement = generateRandomNumber(1, arrayLength - 1);
   const correctAnswer = progressionArray[unknownElement];
   progressionArray[unknownElement] = '..';
   const question = progressionArray.join(' ');
 
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
-const brainProgression = () => {
+const startGame = () => {
   const mission = 'What number is missing in the progression?';
-  engine(mission, runGame);
+  runEngine(mission, generateRound);
 };
 
-export default brainProgression;
+export default startGame;

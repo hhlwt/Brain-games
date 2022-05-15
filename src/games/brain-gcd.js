@@ -1,6 +1,6 @@
-import engine from '../index.js';
+import runEngine from '../index.js';
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
   if (secondNumber === 0) {
@@ -18,21 +18,21 @@ const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
 };
 
 const generatePair = () => {
-  const pair = [random(1, 101), random(1, 101)];
+  const pair = [generateRandomNumber(1, 101), generateRandomNumber(1, 101)];
   return pair;
 };
 
-const runGame = () => {
+const generateRound = () => {
   const pair = generatePair();
   const correctAnswer = theEuclideanAlgorithm(pair[0], pair[1]);
   const question = `${String(pair[0])} ${String(pair[1])}`;
 
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
-const brainGCD = () => {
+const startGame = () => {
   const mission = 'Find the greatest common divisor of given numbers.';
-  engine(mission, runGame);
+  runEngine(mission, generateRound);
 };
 
-export default brainGCD;
+export default startGame;

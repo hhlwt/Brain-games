@@ -1,6 +1,6 @@
-import engine from '../index.js';
+import runEngine from '../index.js';
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const isPrime = (num) => {
   if (num === 1) {
@@ -10,17 +10,17 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const runGame = () => {
-  const number = random(1, 101);
+const generateRound = () => {
+  const number = generateRandomNumber(1, 101);
   const correctAnswer = isPrime(number);
   const question = `${number}`;
 
   return [question, correctAnswer];
 };
 
-const brainPrime = () => {
+const startGame = () => {
   const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  engine(mission, runGame);
+  runEngine(mission, generateRound);
 };
 
-export default brainPrime;
+export default startGame;

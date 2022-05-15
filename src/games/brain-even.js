@@ -1,9 +1,9 @@
-import engine from '../index.js';
+import runEngine from '../index.js';
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const runGame = () => {
-  const randomNumber = random(1, 101);
+const generateRound = () => {
+  const randomNumber = generateRandomNumber(1, 101);
   let correctAnswer = 'no';
   if (randomNumber % 2 === 0) {
     correctAnswer = 'yes';
@@ -12,9 +12,9 @@ const runGame = () => {
   return [question, correctAnswer];
 };
 
-const brainEven = () => {
+const startGame = () => {
   const mission = 'Answer "yes" if the number is even, otherwise answer "no".';
-  engine(mission, runGame);
+  runEngine(mission, generateRound);
 };
 
-export default brainEven;
+export default startGame;

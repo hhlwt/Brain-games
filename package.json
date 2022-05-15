@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/hhlwt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/hhlwt/frontend-project-lvl1/actions)",
+  "description": "collection of simple console games",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/hhlwt/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Dmitry Romanov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hhlwt/frontend-project-lvl1/issues"
