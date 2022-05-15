@@ -1,4 +1,4 @@
-import runEngine from '../index.js';
+import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
@@ -20,7 +20,7 @@ const generateRound = () => {
 
 const startGame = () => {
   const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  runEngine(mission, generateRound);
+  playGame(mission, generateRound);
 };
 
 export default startGame;

@@ -1,4 +1,4 @@
-import runEngine from '../index.js';
+import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
@@ -21,7 +21,7 @@ const generateRound = () => {
 
 const startGame = () => {
   const mission = 'What number is missing in the progression?';
-  runEngine(mission, generateRound);
+  playGame(mission, generateRound);
 };
 
 export default startGame;

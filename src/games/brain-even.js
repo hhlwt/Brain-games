@@ -1,4 +1,4 @@
-import runEngine from '../index.js';
+import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
@@ -14,7 +14,7 @@ const generateRound = () => {
 
 const startGame = () => {
   const mission = 'Answer "yes" if the number is even, otherwise answer "no".';
-  runEngine(mission, generateRound);
+  playGame(mission, generateRound);
 };
 
 export default startGame;

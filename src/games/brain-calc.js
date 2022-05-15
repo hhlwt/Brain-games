@@ -1,4 +1,4 @@
-import runEngine from '../index.js';
+import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
@@ -28,7 +28,7 @@ const generateRound = () => {
 
 const startGame = () => {
   const mission = 'What is the result of the expression?';
-  runEngine(mission, generateRound);
+  playGame(mission, generateRound);
 };
 
 export default startGame;

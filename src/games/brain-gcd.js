@@ -1,4 +1,4 @@
-import runEngine from '../index.js';
+import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
@@ -32,7 +32,7 @@ const generateRound = () => {
 
 const startGame = () => {
   const mission = 'Find the greatest common divisor of given numbers.';
-  runEngine(mission, generateRound);
+  playGame(mission, generateRound);
 };
 
 export default startGame;
