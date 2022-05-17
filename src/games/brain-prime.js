@@ -3,15 +3,15 @@ import generateRandomNumber from '../utilites.js';
 
 const isPrime = (num) => {
   if (num === 1) {
-    return 'no';
+    return false;
   }
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) if (num % i === 0) return 'no';
-  return 'yes';
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) if (num % i === 0) return false;
+  return true;
 };
 
 const generateRound = () => {
   const number = generateRandomNumber(1, 101);
-  const correctAnswer = isPrime(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const question = `${number}`;
 
   return [question, correctAnswer];

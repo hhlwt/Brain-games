@@ -1,12 +1,11 @@
 import playGame from '../index.js';
 import generateRandomNumber from '../utilites.js';
 
+const isEven = (num) => num % 2 === 0;
+
 const generateRound = () => {
   const randomNumber = generateRandomNumber(1, 101);
-  let correctAnswer = 'no';
-  if (randomNumber % 2 === 0) {
-    correctAnswer = 'yes';
-  }
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
   const question = randomNumber;
   return [question, correctAnswer];
 };
