@@ -1,6 +1,5 @@
 import playGame from '../index.js';
-
-const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+import generateRandomNumber from '../utilites.js';
 
 const theEuclideanAlgorithm = (fisrstNumber, secondNumber) => {
   if (secondNumber === 0) {
@@ -31,8 +30,8 @@ const generateRound = () => {
 };
 
 const startGame = () => {
-  const mission = 'Find the greatest common divisor of given numbers.';
-  playGame(mission, generateRound);
+  const description = 'Find the greatest common divisor of given numbers.';
+  playGame(description, generateRound);
 };
 
 export default startGame;

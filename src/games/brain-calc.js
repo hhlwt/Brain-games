@@ -1,25 +1,23 @@
 import playGame from '../index.js';
+import generateRandomNumber from '../utilites.js';
 
-const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-const generatePair = () => {
-  const pair = [generateRandomNumber(1, 101), generateRandomNumber(1, 101)];
-  return pair;
+const calculate = (firstNumber, secondNumber, operation) => {
+  let result;
+  if (operation === '+') {
+    result = firstNumber + secondNumber;
+  } else if (operation === '-') {
+    result = firstNumber - secondNumber;
+  } else if (operation === '*') {
+    result = firstNumber * secondNumber;
+  }
+  return result;
 };
 
 const generateRound = () => {
-  const operands = generatePair();
+  const operands = [generateRandomNumber(1, 101), generateRandomNumber(1, 101)];
   const mathOperations = ['+', '-', '*'];
   const operation = mathOperations[generateRandomNumber(0, 3)];
-  let correctAnswer;
-
-  if (operation === '+') {
-    correctAnswer = operands[0] + operands[1];
-  } else if (operation === '-') {
-    correctAnswer = operands[0] - operands[1];
-  } else if (operation === '*') {
-    correctAnswer = operands[0] * operands[1];
-  }
+  const correctAnswer = calculate(operands[0], operands[1], operation);
 
   const question = `${String(operands[0])} ${operation} ${String(operands[1])}`;
 
@@ -27,8 +25,8 @@ const generateRound = () => {
 };
 
 const startGame = () => {
-  const mission = 'What is the result of the expression?';
-  playGame(mission, generateRound);
+  const description = 'What is the result of the expression?';
+  playGame(description, generateRound);
 };
 
 export default startGame;

@@ -1,6 +1,5 @@
 import playGame from '../index.js';
-
-const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+import generateRandomNumber from '../utilites.js';
 
 const isPrime = (num) => {
   if (num === 1) {
@@ -19,8 +18,8 @@ const generateRound = () => {
 };
 
 const startGame = () => {
-  const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  playGame(mission, generateRound);
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  playGame(description, generateRound);
 };
 
 export default startGame;
