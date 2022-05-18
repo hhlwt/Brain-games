@@ -14,12 +14,11 @@ const generateRound = () => {
   const commonDifference = generateRandomNumber(1, 6);
   const firstElement = generateRandomNumber(1, 101);
 
-  const progresiion = createProgression(firstElement, commonDifference, progressionLength);
+  const progression = createProgression(firstElement, commonDifference, progressionLength);
 
-  const unknownElement = generateRandomNumber(1, progressionLength - 1);
-  const correctAnswer = progresiion[unknownElement];
-  progresiion[unknownElement] = '..';
-  const question = progresiion.join(' ');
+  const hiddenNumberIndex = generateRandomNumber(1, progressionLength - 1);
+  const correctAnswer = progression.splice(hiddenNumberIndex, 1, '..');
+  const question = progression.join(' ');
 
   return [question, String(correctAnswer)];
 };

@@ -4,9 +4,8 @@ import generateRandomNumber from '../utilites.js';
 const isEven = (num) => num % 2 === 0;
 
 const generateRound = () => {
-  const randomNumber = generateRandomNumber(1, 101);
-  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
-  const question = randomNumber;
+  const question = generateRandomNumber(1, 101);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
