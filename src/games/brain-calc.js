@@ -9,8 +9,10 @@ const calculate = (firstOperand, secondOperand, operation) => {
       return firstOperand + secondOperand;
     case '-':
       return firstOperand - secondOperand;
-    default:
+    case '*':
       return firstOperand * secondOperand;
+    default:
+      throw new Error(`Unknown math operation: '${operation}'!`);
   }
 };
 
