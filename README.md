@@ -8,7 +8,7 @@
 
 <h2>You should make the following steps to try it yourself:</h2>
 <ol>
-  <li>git clone git@github.com:hhlwt/frontend-project-lvl1.git</li>
+  <li>git clone git@github.com:hhlwt/Brain-games.git</li>
   <li>make install</li>
   <li>sudo npm link</li>
 </ol>
