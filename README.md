@@ -1,6 +1,5 @@
-### Hexlet tests and linter status:
+linter & maintainability:
 
-[![Actions Status](https://github.com/hhlwt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/hhlwt/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/hhlwt/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/6cd89efebdc34411ee0e/maintainability" /></a>
 [![Actions Status](https://github.com/hhlwt/frontend-project-lvl1/workflows/make-lint/badge.svg)](https://github.com/hhlwt/frontend-project-lvl1/actions)
 
